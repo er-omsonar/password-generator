@@ -36,9 +36,9 @@ function App() {
   },[length,numberAllowed,charAllowed,passwordGenerator])
   return (
     <>
-   <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-gray-700 h-35">
-  <h1 className="text-white text-center p-3">Password generator</h1>
-  <div className="flex shadow rounded-lg overflow-hidden mb-4">
+   <div className=" mt-55 w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-white h-37">
+  <h1 className="text-orange-600 text-xl text-center p-3">Password generator</h1>
+  <div className=" flex shadow rounded-lg overflow-hidden mb-4">
     <input
       type="text"
       value={password}
@@ -50,16 +50,16 @@ function App() {
     {/* <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button> */}
        <button 
            onClick={copyPasswordToClipboard} 
-        className="outline-none bg-blue-700 text-white px-3 
-                py-5 shrink-0 
-               rounded-md hover:bg-blue-800 active:scale-95 
+        className="outline-none bg-orange-400 text-white px-3 
+                py-3 shrink-0 
+               rounded-md hover:bg-orange-600 active:scale-95 
                transition transform duration-150 ease-in-out">
                copy
        </button>
 
   </div>
     <div className='flex text-sm gap-x-2'>
-      <div className='flex items-center gap-x-1'>
+      <div className='flex items-center gap-x-3'>
         <input type="range"
           min={6}
           max={100}
@@ -67,7 +67,7 @@ function App() {
           className='cursor-pointer'
           onChange={(e)=> {setLength(e.target.value)}}
         />
-        <label className='text-white'>Length: {length}</label>
+        <label className='text-orange-600 text-base'>Length: {length}</label>
       </div>
       <div className='flex items-center gap-x-1'>
         <input 
@@ -78,8 +78,8 @@ function App() {
             setNumberAllowed((prev) => !prev)
           }}
         />
-        <label htmlFor="numberInput" className='text-white'>Numbers</label>
-        <div className='flex items-center gap-x-1'>
+        <label htmlFor="numberInput" className='text-orange-600 text-base'>Numbers</label>
+        <div className='flex items-center gap-x-1 gap-y-3'>
             <input 
             type="checkbox"
             defaultChecked = {charAllowed}
@@ -88,7 +88,7 @@ function App() {
               setCharAllowed((prev) => !prev)
             }}
             />
-             <label htmlFor="charInput" className='text-white'>Characters</label>
+             <label htmlFor="charInput" className='text-orange-600 text-base'>  Characters</label>
         </div>
       </div>
     </div>
