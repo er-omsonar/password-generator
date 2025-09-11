@@ -47,7 +47,16 @@ function App() {
       readOnly
       ref={passwordRef}
     />
-    <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
+    {/* <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button> */}
+       <button 
+           onClick={copyPasswordToClipboard} 
+        className="outline-none bg-blue-700 text-white px-3 
+                py-5 shrink-0 
+               rounded-md hover:bg-blue-800 active:scale-95 
+               transition transform duration-150 ease-in-out">
+               copy
+       </button>
+
   </div>
     <div className='flex text-sm gap-x-2'>
       <div className='flex items-center gap-x-1'>
